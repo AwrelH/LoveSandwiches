@@ -21,6 +21,12 @@ def get_sales_data():
     print('Example: 10,20,30,40,50,60\n')
 
     data_str = input("Enter your data here: ")
-    print(f'The data privided is {data_str}')
+    
+    sales_data = data_str.split(',')
+    validate_data(sales_data)
+
+def validate_data(values):
+    print(values)
 
 get_sales_data()
+
