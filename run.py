@@ -83,8 +83,11 @@ def calculate_surplus_data(sales_row):
     
     return surplus_data
 
-
-    
+def update_surplus_worksheet(surplus_data):
+    print('updating surplus worksheet...\n')
+    surplus_worksheet = SHEET.worksheet('surplus')
+    surplus_worksheet.append_row(surplus_data)
+    print('surplus worksheet updated successfully.\n')
 
 
 
@@ -98,6 +101,7 @@ def main():
     calculate_surplus_data(sales_data)
     new_surplus_data = calculate_surplus_data(sales_data)
     print(new_surplus_data)
+    update_surplus_worksheet(surplus_data)
     
 
 print('welcome to love sandwiches data automation')
